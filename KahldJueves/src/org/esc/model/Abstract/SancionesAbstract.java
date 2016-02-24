@@ -7,7 +7,7 @@ import org.esc.model.Interface.Sanciones;
 
 public abstract class SancionesAbstract implements Sanciones {
 	
-	private String idSanciones = null;
+	private Integer idSanciones = null;
 	private LocalDate fecha = null;
 	private String observacion = null;
 	private Integer nroSanciones = null;
@@ -19,14 +19,14 @@ public abstract class SancionesAbstract implements Sanciones {
 	 * @see org.esc.model.Abstract.Sanciones#getIdSanciones()
 	 */
 	@Override
-	public String getIdSanciones() {
+	public Integer getIdSanciones() {
 		return idSanciones;
 	}
 	/* (non-Javadoc)
 	 * @see org.esc.model.Abstract.Sanciones#setIdSanciones(java.lang.Integer)
 	 */
 	@Override
-	public void setIdSanciones(String idSanciones) {
+	public void setIdSanciones(Integer idSanciones) {
 		this.idSanciones = idSanciones;
 	}
 	/* (non-Javadoc)

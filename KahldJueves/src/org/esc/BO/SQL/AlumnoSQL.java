@@ -2,10 +2,13 @@ package org.esc.BO.SQL;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import org.esc.model.Interface.Alumnos;
+import org.esc.model.Interface.Curso;
 import org.esc.model.Interface.Domicilio;
 import org.esc.model.Interface.Nacionalidad;
+import org.esc.model.Tablas.tableAlumnos;
 
 public class AlumnoSQL {
 
@@ -91,6 +94,24 @@ public class AlumnoSQL {
 		try {
 			while(rs.next()){
 			d.setCodDomicilio(rs.getInt("MAX(codDomicilio)"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void buscaAlumnoPorCurso(Curso c,ArrayList<tableAlumnos> la){
+		
+		cc.conectar();
+		ResultSet rs = cc.consultar("SELECT nombre,apellido,al.DNI"
+				+" FROM personas p INNER JOIN alumnos al ON p.DNI =al.DNI"
+								+"INNER JOIN cursos c ON al.codCurso = c.codCurso"
+				+"WHERE anio = "+c.getAnio()+" AND division = '"+c.getDivision()+"'");
+		try {
+			while(rs.next()){
+				
+				table
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

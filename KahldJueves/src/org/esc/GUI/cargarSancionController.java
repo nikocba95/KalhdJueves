@@ -1,5 +1,6 @@
 package org.esc.GUI;
 
+import org.esc.BO.SQL.alumnosSancionSQL;
 import org.esc.model.Implementacion.SancionesImpl;
 import org.esc.model.Interface.Sanciones;
 
@@ -33,6 +34,8 @@ public class cargarSancionController {
 	private Button buttonCancelar;
 	
 	Sanciones s = new SancionesImpl();
+	alumnosSancionSQL sancionSQL = new alumnosSancionSQL();
+	
 	
 	public void actionGuardar(ActionEvent event){
 		
@@ -40,7 +43,8 @@ public class cargarSancionController {
 		s.setObservacion(textObservaciones.getText());
 		s.setNroSanciones(Integer.parseInt(textAmonestaciones.getText()));
 		s.setFecha(textFecha.getValue());
-		 
+		sancionSQL.cargarSancion(s, a);
+		
 	}
 	
 	public Integer idSancion(){

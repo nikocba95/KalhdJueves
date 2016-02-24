@@ -5,9 +5,9 @@ import java.util.Date;
 
 public interface Sanciones {
 
-	String getIdSanciones();
+	Integer getIdSanciones();
 
-	void setIdSanciones(String idSanciones);
+	void setIdSanciones(Integer idSanciones);
 
 	LocalDate getFecha();
 

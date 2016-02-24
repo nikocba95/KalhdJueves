@@ -40,7 +40,7 @@ public class cargarSancionController {
 		s.setObservacion(textObservaciones.getText());
 		s.setNroSanciones(Integer.parseInt(textAmonestaciones.getText()));
 		s.setFecha(textFecha.getValue());
-		
+		 
 	}
 	
 	public Integer idSancion(){

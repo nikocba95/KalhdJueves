@@ -111,7 +111,7 @@ public class AlumnoSQL {
 		try {
 			while(rs.next()){
 				
-				table
+
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -1,4 +1,4 @@
-package GUI;
+package org.esc.GUI;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.stage.*;

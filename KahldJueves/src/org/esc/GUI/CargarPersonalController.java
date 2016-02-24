@@ -1,4 +1,4 @@
-package GUI;
+package org.esc.GUI;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -31,7 +31,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-public class CargarAlumnoController {
+public class CargarPersonalController {
 
 	@FXML
 	private TextField textDocumento;
@@ -66,29 +66,15 @@ public class CargarAlumnoController {
 	@FXML
 	private TextField textTelefono;
 	@FXML
-	private TextField textNombrePadre;
-	@FXML
-	private TextField textApellidoPadre;
-	@FXML
-	private TextField textNombreMadre;
-	@FXML
-	private TextField textApellidoMadre;
-	@FXML
-	private TextField textNombreTutor;
-	@FXML
-	private TextField textApellidoTutor;
-	@FXML
 	private ImageView foto;
 	@FXML
-	private TextField textMatricula;
+	private TextField textLegajo;
 	@FXML
-	private TextField textEstablecimientoAnterior;
+	private TextField textCuil;
 	@FXML
-	private TextField textConstanciaSexto;
+	private TextField textTitulo;
 	@FXML
-	private DatePicker textFechaEmision;
-	@FXML
-	private TextArea textObservaciones;
+	private TextField textEgresado;
 	@FXML
 	private Label lblEstado;
 	@FXML
@@ -133,16 +119,8 @@ public class CargarAlumnoController {
 			dom.setPiso(Integer.parseInt(textPiso.getText()));
 			dom.setDpto(textDepto.getText());
 			al.setTelefono(Integer.parseInt(textTelefono.getText()));
-			al.setNombreMadre(textNombreMadre.getText());
-			al.setApellidoMadre(textApellidoMadre.getText());
-			al.setNombrePadre(textNombrePadre.getText());
-			al.setApellidoPadre(textApellidoPadre.getText());
-			al.setMatricula(Integer.parseInt(textMatricula.getText()));
 			al.setEstado(estado());
-			al.setEstablecimientoAnterior(textEstablecimientoAnterior.getText());
-			al.setConstanciaSexto(textConstanciaSexto.getText());
-			al.setFechaEmision(textFechaEmision.getValue());
-			al.setObservacion(textObservaciones.getText());
+
 			
 			//EJECUTO SENTENCIAS
 			aSQL.nuevoAlumno(al, dom, nac);
@@ -195,7 +173,7 @@ public class CargarAlumnoController {
 			al.setFoto(fis);
 
 		}catch(MalformedURLException ex){
-			Logger.getLogger(CargarAlumnoController.class.getName()).log(Level.SEVERE,null, ex);
+			Logger.getLogger(CargarPersonalController.class.getName()).log(Level.SEVERE,null, ex);
 		}
 	}
 	

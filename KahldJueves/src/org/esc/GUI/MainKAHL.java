@@ -1,4 +1,4 @@
-package GUI;
+package org.esc.GUI;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

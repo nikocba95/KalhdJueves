@@ -1,4 +1,4 @@
-package GUI;
+package org.esc.GUI;
 
 import java.util.ArrayList;
 

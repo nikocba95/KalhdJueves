@@ -1,4 +1,4 @@
-package GUI;
+package org.esc.GUI;
 
 import org.esc.model.Implementacion.InasistenciasImpl;
 import org.esc.model.Interface.Inasistencias;

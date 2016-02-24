@@ -1,4 +1,4 @@
-package GUI;
+package org.esc.GUI;
 
 import org.esc.model.Implementacion.SancionesImpl;
 import org.esc.model.Interface.Sanciones;

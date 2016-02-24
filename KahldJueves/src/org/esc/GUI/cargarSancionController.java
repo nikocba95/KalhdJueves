@@ -43,14 +43,14 @@ public class cargarSancionController {
 		
 	}
 	
-	public String idSancion(){
+	public Integer idSancion(){
 		if(radioFirma.isSelected())
-			return "Firma";
+			return 1;
 		if(radioTareaReparadora.isSelected())
-			return "Tarea Reparadora";
+			return 2;
 		if(radioObservacion.isSelected())
-			return "Observacion";
+			return 3;
 		else
-			return "Amonestacion";
+			return 4;
 	}
 }
